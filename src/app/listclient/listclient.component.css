@@ -1,0 +1,50 @@
+.client-list-container {
+  padding: 20px 0;
+}
+
+.client-card {
+  border-radius: 10px;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card-title {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.client-info {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.info-item {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+}
+
+.info-item i {
+  color: #6c757d;
+  width: 20px;
+  text-align: center;
+}
+
+.actions .btn {
+  min-width: 100px;
+}
+
+.badge {
+  font-size: 0.8rem;
+  padding: 5px 10px;
+}

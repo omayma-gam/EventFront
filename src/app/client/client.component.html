@@ -1,0 +1,27 @@
+<div class="container mt-5">
+  <div class="form-control">
+    <h1>Ajouter un Client</h1>
+    <form (ngSubmit)=" AjouterClient()">
+      <div class="mb-3">
+        <label class="form-label" > First Name  :</label><br>
+        <input [(ngModel)]="client.firstName" class="form-control" type="text"  name="nom" >
+      </div>
+      <div class="mb-3">
+        <label class="form-label" >Last Name :</label><br>
+        <input [(ngModel)]="client.lastName" class="form-control" type="text"  name="type" >
+      </div>
+      <div class="mb-3">
+        <label class="form-label" >Email:</label><br>
+        <input [(ngModel)]="client.email" class="form-control" type="text"  name="type" >
+      </div>
+      <div class="mb-3">
+        <label class="form-label" >Password :</label><br>
+        <input [(ngModel)]="client.password" class="form-control" type="password"  name="type" >
+      </div>
+
+      <button routerLink="/AffClient" class="mt-3 mb-3 form-control-lg btn btn-outline-danger" type="submit" value="Ajouter">
+      </button>
+    </form>
+  </div>
+</div>
+

@@ -1,0 +1,72 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <span style="flex: 1 1 auto;"></span>
+
+  <!-- Menu principal (toolbar) -->
+  <button routerLink="/home" mat-button>Accueil</button>
+
+  <!-- Menu Client -->
+  <button mat-button [matMenuTriggerFor]="clientMenu">
+    Client
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </button>
+  <mat-menu #clientMenu>
+    <button mat-menu-item routerLink="/AddClient">Ajouter</button>
+    <button mat-menu-item routerLink="/AffClient">Afficher</button>
+  </mat-menu>
+
+  <!-- Menu Reservation -->
+  <button mat-button [matMenuTriggerFor]="reservationMenu">
+    Réservation
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </button>
+  <mat-menu #reservationMenu>
+    <button mat-menu-item routerLink="/AddReservation">Ajouter</button>
+    <button mat-menu-item routerLink="/AffReservation">Afficher</button>
+  </mat-menu>
+
+  <!-- Menu Evenement -->
+  <button mat-button [matMenuTriggerFor]="eventMenu">
+    Événement
+    <mat-icon>keyboard_arrow_down</mat-icon>
+  </button>
+  <mat-menu #eventMenu>
+    <button mat-menu-item routerLink="/AddEvent">Ajouter</button>
+    <button mat-menu-item routerLink="/AffEvent">Afficher</button>
+  </mat-menu>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container">
+  <mat-drawer #drawer mode="over" position="start">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/home" (click)="drawer.close()">
+        <mat-icon>home</mat-icon>
+        <span>Accueil</span>
+      </a>
+
+      <a mat-list-item routerLink="/AffClient" (click)="drawer.close()">
+        <mat-icon>group</mat-icon>
+        <span>Clients</span>
+      </a>
+
+      <a mat-list-item routerLink="/AffEvent" (click)="drawer.close()">
+        <mat-icon>event</mat-icon>
+        <span>Événements</span>
+      </a>
+
+      <a mat-list-item routerLink="/AffReservation" (click)="drawer.close()">
+        <mat-icon>book_online</mat-icon>
+        <span>Réservations</span>
+      </a>
+    </mat-nav-list>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

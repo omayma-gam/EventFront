@@ -1,0 +1,36 @@
+<div class="client-list-container">
+  <div class="container mt-5">
+    <div class="row justify-content-center g-4">
+      <div class="col-md-6 col-lg-4" *ngFor="let client of clientlist">
+        <div class="client-card card h-100 shadow-sm">
+          <div class="card-body d-flex flex-column">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="card-title m-0">Fiche Client</h5>
+              <span class="badge bg-primary">ID: {{client.id}}</span>
+            </div>
+
+            <div class="client-info mb-3">
+              <div class="info-item">
+                <i class="bi bi-person-fill me-2"></i>
+                <span>{{client.firstName}} {{client.lastName}}</span>
+              </div>
+              <div class="info-item">
+                <i class="bi bi-envelope-fill me-2"></i>
+                <span>{{client.email}}</span>
+              </div>
+            </div>
+
+            <div class="actions mt-auto d-flex justify-content-between">
+              <button class="btn btn-outline-danger btn-sm" (click)="Supprimeclient(client.id)">
+                <i class="bi bi-trash3-fill me-1"></i> Supprimer
+              </button>
+              <a [routerLink]="['/modclient',client.id]" class="btn btn-outline-primary btn-sm">
+                <i class="bi bi-pen-fill me-1"></i> Modifier
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

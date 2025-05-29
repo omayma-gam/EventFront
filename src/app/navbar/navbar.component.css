@@ -1,0 +1,49 @@
+/* Barre d'outils orange personnalisée */
+mat-toolbar {
+  background-color: #ff9800; /* orange vif */
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Boutons sur la toolbar */
+mat-toolbar button {
+  color: white;
+  margin-right: 10px;
+}
+
+mat-toolbar button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Menus déroulants */
+mat-menu {
+  background-color: #fff3e0;
+  color: #333;
+}
+
+mat-menu button:hover {
+  background-color: #ffe0b2;
+}
+
+/* Liste dans le drawer */
+.custom-list {
+  padding-top: 20px;
+  background-color: #fbe9e7;
+}
+
+.custom-item button {
+  width: 100%;
+  justify-content: flex-start;
+  text-align: left;
+  color: #e65100;
+  font-weight: 500;
+}
+
+.custom-item button:hover {
+  background-color: #ffccbc;
+}
+
+mat-icon {
+  margin-right: 8px;
+}
