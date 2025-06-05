@@ -1,0 +1,51 @@
+<div class="container mt-5">
+  <div class="card shadow-lg rounded-4">
+    <div class="card-body p-5">
+      <h2 class="text-center text-primary mb-4">
+        <i class="bi bi-person-plus-fill me-2"></i>Ajouter un Client
+      </h2>
+
+      <form method="POST" (ngSubmit)="AjouterClient()">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Prénom</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+              <input [(ngModel)]="client.firstName" name="firstName" type="text" class="form-control" placeholder="Entrez le prénom" required>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label">Nom</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+              <input [(ngModel)]="client.lastName" name="lastName" type="text" class="form-control" placeholder="Entrez le nom" required>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <label class="form-label">Email</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+              <input [(ngModel)]="client.email" name="email" type="email" class="form-control" placeholder="exemple@mail.com" required>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <label class="form-label">Mot de passe</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+              <input [(ngModel)]="client.password" name="password" type="password" class="form-control" placeholder="Mot de passe sécurisé" required>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-4">
+          <button class="btn btn-primary btn-lg px-4" type="submit">
+            <i class="bi bi-plus-circle me-2"></i>Ajouter Client
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

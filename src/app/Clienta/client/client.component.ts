@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {ClientServiceService} from '../ClientService.service';
+import {ClientServiceService} from '../../ClientService.service';
 import {Router, RouterLink} from '@angular/router';
 import {DataRowOutlet} from '@angular/cdk/table';
 
@@ -9,7 +9,6 @@ import {DataRowOutlet} from '@angular/cdk/table';
   standalone: true,
   imports: [
     FormsModule,
-    DataRowOutlet,
     RouterLink
   ],
   templateUrl: './client.component.html',
@@ -33,9 +32,12 @@ export class ClientComponent implements OnInit {
 
 
   AjouterClient() {
-    this.clientservice.AjouterClient(this.client).subscribe(client => {
-      this.clientlist = client;
-      console.log(client)
+    this.clientservice.AjouterClient(this.client).subscribe(clientadd => {
+      this.clientlist = clientadd;
+      if (clientadd){
+        this.router.navigateByUrl('/AffClient');
+      }
+
 
     })
 

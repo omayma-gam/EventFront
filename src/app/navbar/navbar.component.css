@@ -1,49 +1,37 @@
-/* Barre d'outils orange personnalisée */
-mat-toolbar {
-  background-color: #ff9800; /* orange vif */
+.custom-toolbar {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 0 16px;
+  font-weight: 500;
+  background-color: #1976d2 !important;
   color: white;
-  font-weight: bold;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Boutons sur la toolbar */
-mat-toolbar button {
-  color: white;
-  margin-right: 10px;
+.flex-spacer {
+  flex: 1 1 auto;
 }
 
-mat-toolbar button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+.custom-container {
+  height: 100vh;
+  background-color: #f5f5f5;
 }
 
-/* Menus déroulants */
-mat-menu {
-  background-color: #fff3e0;
+.custom-drawer {
+  width: 240px;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+}
+
+mat-nav-list a {
+  font-weight: 500;
   color: #333;
 }
 
-mat-menu button:hover {
-  background-color: #ffe0b2;
+mat-nav-list a:hover {
+  background-color: #e3f2fd;
 }
 
-/* Liste dans le drawer */
-.custom-list {
-  padding-top: 20px;
-  background-color: #fbe9e7;
-}
-
-.custom-item button {
-  width: 100%;
-  justify-content: flex-start;
-  text-align: left;
-  color: #e65100;
-  font-weight: 500;
-}
-
-.custom-item button:hover {
-  background-color: #ffccbc;
-}
-
-mat-icon {
-  margin-right: 8px;
+.main-content {
+  padding: 24px;
+  background-color: #fafafa;
+  min-height: 100vh;
 }

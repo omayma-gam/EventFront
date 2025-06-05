@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ClientServiceService} from '../ClientService.service';
+import {ClientServiceService} from '../../ClientService.service';
 import {Router, RouterLink} from '@angular/router';
 import {DatePipe, NgForOf} from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
@@ -40,7 +40,7 @@ export class ListclientComponent implements OnInit {
         if (supprime) {
           this.aficherClient()
         }
-        window.location.reload();  // Reloads the entire page
+         // Reloads the entire page
 
       })
     }
